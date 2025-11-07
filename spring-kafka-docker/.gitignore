@@ -1,0 +1,38 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+
+# Maven / Gradle
+target/
+build/
+out/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/jvm.config
+
+# Logs
+*.log
+logs/
+**/logs/
+*.pid
+
+# Kafka Docker Volumes (local state)
+kafka-data/
+kafka-meta/
+tmp/
+*.tmp
+
+# Docker
+*.env
+docker-compose.override.yml
+
+# Misc
+*.class
+*.jar
+*.war
+*.ear
