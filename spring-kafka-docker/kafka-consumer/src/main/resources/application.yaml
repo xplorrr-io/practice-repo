@@ -3,20 +3,17 @@ server:
 
 app:
   kafka:
-    topic: demo-topic
-    group: demo-group
+    topic: topic
+    group: group
 
 spring:
-  applicatoin:
-    name: kafka-consumer
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:kafka:9092}
     consumer:
       group-id: ${app.kafka.group}
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       auto-offset-reset: earliest
-
 management:
   endpoints:
     web:
